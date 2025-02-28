@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Main Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            background-image: url('wallpapers/background.png'); /* Replace with your background image */
+            background-size: cover;
+            font-family: 'HYWenHei 85W', Arial, sans-serif;
+            font-size: 24px;
+        }
+
+        #region1:hover {
+            color: white;
+            background-color: #3e9f85;
+        }
+
+        #region2:hover {
+            color: white;
+            background-color: #e8c660;
+        }
+
+        #region3:hover {
+            color: white;
+            background-color: #6333AE;
+        }
+
+        #region4:hover {
+            color: white;
+            background-color: #8EA664;
+        }
+
+        #region5:hover {
+            color: white;
+            background-color: #698AE8;
+        }
+
+        #region6:hover {
+            color: white;
+            background-color: #DD633A;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="mondstadt.html" id="region1">Mondstadt</a></li>
+            <li><a href="liyue.html" id="region2">Liyue</a></li>
+            <li><a href="inazuma.html" id="region3">Inazuma</a></li>
+            <li class="image-link"><a href="landing.html" id="logo"><img src="logo.svg" alt="Logo"></a></li>
+            <li><a href="sumeru.html" id="region4">Sumeru</a></li>
+            <li><a href="fontaine.html" id="region5">Fontaine</a></li>
+            <li><a href="natlan.html" id="region6">Natlan</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll("a"); // Select all links
+            const body = document.querySelector("body");
+    
+            links.forEach(link => {
+                link.addEventListener("click", function (event) {
+                    // Prevent immediate navigation
+                    event.preventDefault();
+    
+                    // Add fade-out effect
+                    body.classList.add("fade-out");
+    
+                    // Wait for the animation to finish, then navigate
+                    setTimeout(() => {
+                        window.location.href = link.href;
+                    }, 500); // Match the duration of the fade-out animation
+                });
+            });
+    
+            // Apply fade-in effect on page load
+            body.classList.add("fade-in");
+        });
+    </script>
+</body>
+</html>

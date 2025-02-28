@@ -1,0 +1,185 @@
+.card {
+    width: 315px;
+    height: 540px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    perspective: 2500px;
+    z-index: 1;
+}
+.wrapper{
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+.cover-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.card:hover .wrapper{
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+}
+.wrapper::before,
+.wrapper::after{
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 50px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+}
+.wrapper::before{
+    top: 0;
+    height: 100%;
+}
+.wrapper::after{
+    bottom: 0;
+    opacity: 1;
+}
+.character {
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: 2;
+    pointer-events: auto;
+    border-radius: 15px;
+}
+.card:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 10px);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0); /* Semi-transparent background */
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+nav ul li {
+    text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav ul li a:hover {
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#mondstadt {
+    color: #3e9f85;
+}
+#mondstadt:hover {
+    color: white;
+    background-color: #3e9f85;
+}
+
+#liyue {
+    color: #e8c660;
+}
+#liyue:hover {
+    color: white;
+    background-color: #e8c660;
+}
+
+#inazuma {
+    color: #6333AE;
+}
+#inazuma:hover {
+    color: white;
+    background-color: #6333AE;
+}
+
+#sumeru {
+    color: #8EA664;
+}
+#sumeru:hover {
+    color: white;
+    background-color: #8EA664;
+}
+
+#fontaine {
+    color: #698AE8;
+}
+#fontaine:hover {
+    color: white;
+    background-color: #698AE8;
+}
+
+#natlan {
+    color: #DD633A;
+}
+#natlan:hover {
+    color: white;
+    background-color: #DD633A;
+}
+
+#logo:hover {
+    background-color: black;
+    filter: invert(1);
+}
+
+nav ul li img {
+    width: 100px; /* Adjust the size of the image */
+    height: auto;
+}
+
+.image-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Define fade animations */
+.fade-out {
+    animation: fadeOut 2s ease-out forwards; /* Ease-out for smooth exit */
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in forwards; /* Ease-in for smooth entry */
+}
+
+/* Keyframes for fade out */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Keyframes for fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontaine</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/atropos@2.0.2/atropos.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            margin-top: 40%;
+            background-image: url(wallpapers/fontaine.png);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'HYWenHei 85W', Arial, sans-serif;
+            font-size: 24px;
+            overflow-x: hidden;
+        }
+
+        nav {
+            background-image: url(wallpapers/fontaine.png);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .grid-container {
+            position: absolute;
+            top: 30%;
+            left: 10%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 40px;
+            padding: 40px;
+            background: rgba(39, 20, 68, 0.5);
+            border-radius: 60px;
+            width: 80%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+            font-size: 1.5em;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .atropos {
+            width: 100%;
+            height: auto;
+        }
+
+        .my-atropos {
+            z-index: 1;
+        }
+
+        .atropos-inner {
+            border-radius: 20px;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .card-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .atropos-inner, .atropos-rotate, .atropos-scale, .container {
+            overflow: visible;
+        }
+
+        .preview {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            text-align: center;
+            overflow-x: hidden;
+            z-index: 5555;
+        }
+        .preview img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .close-btn {
+            position: fixed;
+            top: 19.2%;
+            left: 80.2%;
+            width: 50px;
+            height: 50px;
+            border: 0px solid red;
+            background: transparent;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="mondstadt.html" id="mondstadt">Mondstadt</a></li>
+            <li><a href="liyue.html" id="liyue">Liyue</a></li>
+            <li><a href="inazuma.html" id="inazuma">Inazuma</a></li>
+            <li class="image-link"><a href="landing.html" id="logo"><img src="logo.svg"></a></li>
+            <li><a href="sumeru.html" id="sumeru">Sumeru</a></li>
+            <li><a href="fontaine.html" id="fontaine">Fontaine</a></li>
+            <li><a href="natlan.html" id="natlan">Natlan</a></li>
+        </ul>
+    </nav>
+
+    <div class="grid-container">
+        <div class="grid-item" data-id="1">
+            <div class="container"> 
+                <div class="atropos my-atropos">
+                    <div class="atropos-scale">
+                        <div class="atropos-rotate">
+                            <div class="atropos-inner">
+                                <div class="card-content">
+                                    <div class="card">
+                                        <div class="wrapper">
+                                            <img src="cards/fontaine/Clorinde_Character_Card.webp" class="cover-image">
+                                        </div>
+                                        <img src="cards/fontaine/Clorinde_Character_Card.webp" class="character" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item" data-id="2">
+            <div class="container"> 
+                <div class="atropos my-atropos">
+                    <div class="atropos-scale">
+                        <div class="atropos-rotate">
+                            <div class="atropos-inner">
+                                <div class="card-content">
+                                    <div class="card">
+                                        <div class="wrapper">
+                                            <img src="cards/fontaine/Navia_Character_Card.webp" class="cover-image">
+                                        </div>
+                                        <img src="cards/fontaine/Navia_Character_Card.webp" class="character" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item" data-id="3">
+            <div class="container"> 
+                <div class="atropos my-atropos">
+                    <div class="atropos-scale">
+                        <div class="atropos-rotate">
+                            <div class="atropos-inner">
+                                <div class="card-content">
+                                    <div class="card">
+                                        <div class="wrapper">
+                                            <img src="cards/fontaine/Furina_Character_Card.webp" class="cover-image" />
+                                        </div>
+                                        <img src="cards/fontaine/Furina_Character_Card.webp" class="character" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item" data-id="4">
+            <div class="container"> 
+                <div class="atropos my-atropos">
+                    <div class="atropos-scale">
+                        <div class="atropos-rotate">
+                            <div class="atropos-inner">
+                                <div class="card-content">
+                                    <div class="card">
+                                        <div class="wrapper">
+                                            <img src="cards/fontaine/Neuvillette_Character_Card.webp" class="cover-image">
+                                        </div>
+                                        <img src="cards/fontaine/Neuvillette_Character_Card.webp" class="character" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item" data-id="5">
+            <div class="container"> 
+                <div class="atropos my-atropos">
+                    <div class="atropos-scale">
+                        <div class="atropos-rotate">
+                            <div class="atropos-inner">
+                                <div class="card-content">
+                                    <div class="card">
+                                        <div class="wrapper">
+                                            <img src="cards/fontaine/Chiori_Character_Card.webp" class="cover-image">
+                                        </div>
+                                        <img src="cards/fontaine/Chiori_Character_Card.png" class="character" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item" data-id="6">
+            <div class="container"> 
+                <div class="atropos my-atropos">
+                    <div class="atropos-scale">
+                        <div class="atropos-rotate">
+                            <div class="atropos-inner">
+                                <div class="card-content">
+                                    <div class="card">
+                                        <div class="wrapper">
+                                            <img src="cards/fontaine/Lynette_Character_Card.webp" class="cover-image">
+                                        </div>
+                                        <img src="cards/fontaine/Lynette_Character_Card.png" class="character" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item" data-id="7">
+            <div class="container"> 
+                <div class="atropos my-atropos">
+                    <div class="atropos-scale">
+                        <div class="atropos-rotate">
+                            <div class="atropos-inner">
+                                <div class="card-content">
+                                    <div class="card">
+                                        <div class="wrapper">
+                                            <img src="cards/fontaine/Lyney_Character_Card.webp" class="cover-image">
+                                        </div>
+                                        <img src="cards/fontaine/Lyney_Character_Card.webp" class="character" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item" data-id="8">
+            <div class="container"> 
+                <div class="atropos my-atropos">
+                    <div class="atropos-scale">
+                        <div class="atropos-rotate">
+                            <div class="atropos-inner">
+                                <div class="card-content">
+                                    <div class="card">
+                                        <div class="wrapper">
+                                            <img src="cards/fontaine/Chevreuse_Character_Card.webp" class="cover-image">
+                                        </div>
+                                        <img src="cards/fontaine/Chevreuse_Character_Card.webp" class="character" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview" id="previewBox">
+        <img id="previewImage" src="" alt="Aperçu">
+        <button class="close-btn" id="closePreview"></button>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/atropos@2.0.2/atropos.min.js"></script>
+
+<script>
+    if (typeof Atropos !== 'undefined') {
+        document.querySelectorAll('.my-atropos').forEach(element => {
+            Atropos({
+                el: element,
+                activeOffset: 40,
+                shadowScale: 1.05,
+                highlight: true,
+                rotateXMax: 15,
+                rotateYMax: 15,
+                stretchX: 40,
+                stretchY: 40,
+            });
+        });
+    } else {
+        console.error('Atropos library not loaded correctly');
+    }
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll("a"); // Select all links
+        const nav = document.querySelector("nav");
+
+        links.forEach(link => {
+            link.addEventListener("click", function (event) {
+                // Prevent immediate navigation
+                event.preventDefault();
+
+                // Add fade-out effect
+                nav.classList.add("fade-out");
+
+                // Wait for the animation to finish, then navigate
+                setTimeout(() => {
+                    window.location.href = link.href;
+                }, 500); // Match the duration of the fade-out animation
+            });
+        });
+
+        // Apply fade-in effect on page load
+        nav.classList.add("fade-in");
+    });
+</script>
+
+<script>
+    // Base de données des objets (simulée)
+    const objectsData = {
+        1: { img: "skills/fontaine/clorinde.png" },
+        2: { img: "skills/fontaine/navia.png" },
+        3: { img: "skills/fontaine/furina.png" },
+        4: { img: "skills/fontaine/neuvillette.png" },
+        5: { img: "skills/fontaine/chiori.png" },
+        6: { img: "skills/fontaine/lynette.png" },
+        7: { img: "skills/fontaine/lyney.png" },
+        8: { img: "skills/fontaine/chevreuse.png" }
+    };
+
+    const gridItems = document.querySelectorAll(".grid-item");
+    const body = document.body;
+    const previewBox = document.getElementById("previewBox");
+    const previewImage = document.getElementById("previewImage");
+    const closePreview = document.getElementById("closePreview");
+
+    gridItems.forEach(item => {
+        item.addEventListener("click", function() {
+            const itemId = this.getAttribute("data-id"); // Récupère l'ID de l'item cliqué
+            const itemData = objectsData[itemId]; // Récupère les données correspondantes
+
+            if (itemData) {
+                previewImage.src = itemData.img;
+                previewBox.style.display = "block";
+                body.style.overflow = "hidden";
+            }
+        });
+    });
+
+    closePreview.addEventListener("click", function() {
+        previewBox.style.display = "none";
+        body.style.overflow = "visible";
+        body.style.overflowX = "hidden";
+    });
+</script>
+</body>
+</html>
