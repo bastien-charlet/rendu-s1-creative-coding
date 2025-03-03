@@ -22,6 +22,7 @@ Tel le personnage principal, vous allez pouvoir explorer, par régions, le monde
 1️⃣ **Recherche et répertoriage des personnages du jeu (in-game, wiki).**\
 2️⃣ **Maquettage et grille sur Figma**\
 3️⃣ **Génération avec l'IA de fond d'écrans à partir des cartes terrains**\
+4️⃣ **Détourage de mes personnages préférés sur Photoshop pour un meilleur rendu**\
 4️⃣ **Intégration de la maquette sur Visual Studio Code**\
 5️⃣ **Recherche de librairies et réalisation de mes effets parallax**\
 6️⃣ **Programmation et mise en page des cartes et de leurs pouvoirs**\
