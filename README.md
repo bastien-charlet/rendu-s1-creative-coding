@@ -12,6 +12,7 @@ Tel le personnage principal, vous allez pouvoir explorer, par régions, le monde
 - **JavaScript (Atropos.js, Vanilla)** → Effets de mouvement
 - **CSS Vanilla** → Effet de parallax sur les cartes
 - **SVG & PNG** → Illustrations des personnages et paysages
+- **GitHub & Fork** → Mise en ligne du projet
 
 | **Atropos** | [https://atroposjs.com/](https://atroposjs.com/) |
 
